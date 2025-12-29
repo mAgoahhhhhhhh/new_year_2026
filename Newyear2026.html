@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500&family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Newyear2026.css">
+</head>
+<body>
+    <main class="christmas-card">
+        <h1 class="title">HAPPY NEW YEAR 2026</h1>
+        
+        <div class="greeting-message">
+            <p>
+                ขอให้เป็นปีที่ดีทุกคน ผ่านไปแล้วอีก 1 ปี<br>
+                ขอให้ปี 2026 นี้เป็นปีที่ดีสำหรับทุกคนนะ<br>
+                <span class="highlight">อะไรที่มันเหี้ยๆ ก็ทิ้งไว้ปีที่แล้ว และรอรับสิ่งเหี้ยต่อปีหน้า</span><br>
+                ใครโดนค่า <span class="accent">Light novel Manga Game</span> ปีนี้ไปเยอะ<br>
+                ก็รอโดนใหม่ปีหน้านะครับ<br>
+                <h2 class="troll"><strong>หยอกๆ</strong><br></h2>
+                <strong>สุดท้ายนี้ขอให้ทุกคนมีความสุขมากๆ</strong><br>
+            </p>
+        </div>
+
+        <div class="video-container">
+            <div class="tenor-gif-embed" data-postid="13248580" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+                <a href="https://tenor.com/view/padoru-gif-13248580">Padoru Sticker</a>
+            </div> 
+            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+
+        <div class="holly-decoration">.. ..-. / -.-- --- ..- / ..-. .. -. -.. / - .... .. ... / -- . ... ... .- --. . --..-- / ... . -. -.. / .. - / -... .- -.-. -.- / - --- / -- . / .- -. -.. / --. . - / .- / --. .. ..-. - .-.-.-</div>
+    </main>
+
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❅';
+            
+            // Randomize position (0% to 100% of screen width)
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            
+            // Randomize animation duration (between 5s and 10s) to vary speed
+            snowflake.style.animationDuration = Math.random() * 5 + 10 + 's'; 
+            
+            // Randomize size slightly
+            snowflake.style.fontSize = Math.random() * 20 + 10 + 'px';
+            
+            document.body.appendChild(snowflake);
+            
+            // Remove snowflake after animation ends (10 seconds) to keep website smooth
+            setTimeout(() => {
+                snowflake.remove();
+            }, 10000);
+        }
+
+        // Create a new snowflake every 300 milliseconds
+        setInterval(createSnowflake, 300);
+    </script>
+</body>
+</html>

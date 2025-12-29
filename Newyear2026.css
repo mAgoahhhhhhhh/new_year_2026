@@ -1,0 +1,125 @@
+/* --- Variables for Christmas Theme --- */
+:root {
+    --bg-color: #0F2027; /* Dark Night Sky */
+    --card-bg: #ffff; /* Creamy White */
+    --christmas-red: #d42426;
+    --christmas-green: #2e7d32;
+    --gold: #f1c40f;
+    --text-color: #2c3e50;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle, #203a43, #0F2027);
+    font-family: 'Kanit', sans-serif; /* Readable Thai font */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* --- The Main Card Design --- */
+.christmas-card {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 20px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    border: 8px solid var(--christmas-red);
+    box-shadow: 
+        0 0 0 10px #fff, /* Inner white border illusion */
+        0 0 0 12px var(--christmas-green), /* Outer green border */
+        0 20px 50px rgba(0,0,0,0.5); /* Drop shadow */
+}
+
+/* --- Typography --- */
+.title {
+    font-family: 'Mountains of Christmas', cursive; /* Festive Font */
+    color: var(--christmas-red);
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+    line-height: 1.2;
+}
+
+.greeting-message {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Styling the sarcastic parts */
+.highlight {
+    background-color: rgba(212, 36, 38, 0.1);
+    color: var(--christmas-red);
+    padding: 0 5px;
+    border-radius: 4px;
+}
+
+.troll {
+    color: rgb(181, 52, 52);
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.accent {
+    color: var(--christmas-green);
+    font-weight: bold;
+}
+
+.holly-decoration {
+    color: rgb(250, 246, 246);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* --- Video/GIF Container Fix --- */
+.video-container {
+    width: 100%;
+    max-width: 300px; /* Limit size of Padoru */
+    margin: 0 auto;
+    /* border: 4px dashed var(--gold); */
+    border-radius: 15px;
+    padding: 10px;
+    background: white;
+    overflow: hidden;
+}
+
+/* --- Falling Snow Animation (Background) --- */
+.snowflake {
+    color: #fff;
+    position: fixed;
+    top: -50px; /* Start slightly above screen */
+    z-index: 9999; /* Ensure it creates on top of everything */
+    user-select: none;
+    pointer-events: none; /* Let clicks pass through snow */
+    cursor: default;
+    
+    /* Only define the animation name and timing here. 
+       Duration is handled by JS */
+    animation-name: snowflakes-fall, snowflakes-shake;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: 1; /* Run once then delete */
+    animation-play-state: running, running;
+}
+
+@keyframes snowflakes-fall {
+    0% { top: -10%; }
+    100% { top: 100%; }
+}
+
+@keyframes snowflakes-shake {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(80px); }
+    100% { transform: translateX(0px); }
+}
